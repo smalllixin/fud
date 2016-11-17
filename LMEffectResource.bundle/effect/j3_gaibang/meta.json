@@ -1,0 +1,59 @@
+{  
+    "name": "gaibang",
+    "type": "dynamic",
+    "maxPersonCount": 1,
+    "position"  :   160,
+    "version": 1,
+   "filters":[  
+      {  
+         "alignX":170,
+         "alignY":15,
+         "scaleWidth":200,
+         "leftIndex":0,
+         "rightIndex":32,
+         "alignIndexLst":[  
+            16
+         ],
+         "type":"D",
+         "width":321,
+         "height":289,
+         "frames":36,
+         "folderName":"bozi",
+         "frameDuration":50,
+         "triggerType":2,
+         "looping":1,
+         "showUtilFinish":1
+      },
+      {  
+         "alignX":190,
+         "alignY":205,
+         "scaleWidth":180,
+         "leftIndex":0,
+         "rightIndex":32,
+         "alignIndexLst":[  
+            43
+         ],
+         "type":"D",
+         "width":367,
+         "height":408,
+         "frames":36,
+         "folderName":"toufa",
+         "frameDuration":50,
+         "triggerType":2,
+         "looping":1,
+         "showUtilFinish":1
+      },
+      {  
+         "showTop":1,
+         "type":"V",
+         "width":360,
+         "height":640,
+         "frames":87,
+         "folderName":"bj",
+         "frameDuration":50,
+         "triggerType":2,
+         "looping":1,
+         "showUtilFinish":1
+      }
+   ]
+}

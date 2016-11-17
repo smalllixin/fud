@@ -1,0 +1,219 @@
+{
+  "position" : 160,
+  "sections" : [
+    {
+      "filterlist" : [
+        "strongman",
+        "bizi",
+        "erduo",
+        "juhua",
+        "yanlei",
+        "sh"
+      ],
+      "tips" : "",
+      "sectionname" : "config",
+      "duration" : 3
+    }
+  ],
+  "filters" : [
+    {
+      "data" : {
+        "audioPlayMode" : 0,
+        "resloadtype" : 0,
+        "glsl" : "glsl",
+        "timeparam" : [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "foldername" : "strongman",
+        "resources" : [
+
+        ],
+        "pointIndexes" : [
+          [
+            6,
+            16,
+            26,
+            46,
+            74,
+            77,
+            84,
+            90,
+            13,
+            19
+          ],
+          [
+            6,
+            16,
+            26,
+            46,
+            74,
+            77,
+            84,
+            90,
+            13,
+            19
+          ]
+        ],
+        "maxPersonCount" : 2,
+        "triggerType" : 2,
+        "audio" : ""
+      },
+      "name" : "strongman",
+      "type" : "shape",
+      "reload" : 1
+    },
+    {
+      "data" : {
+        "looping" : 1,
+        "showUtilFinish" : 0,
+        "alignY" : 200,
+        "width" : 78,
+        "alignX" : 39,
+        "type" : "D",
+        "audio" : "",
+        "frameDuration" : 50,
+        "alignAudio" : 0,
+        "maxcount" : 5,
+        "folderName" : "juhua",
+        "height" : 89,
+        "frames" : 31,
+        "scaleWidth" : 200,
+        "rightIndex" : 32,
+        "alignIndexLst" : [
+          43
+        ],
+        "leftIndex" : 0,
+        "triggerType" : 2
+      },
+      "name" : "juhua",
+      "type" : "dynamic",
+      "reload" : 1
+    },
+    {
+      "data" : {
+        "looping" : 1,
+        "showUtilFinish" : 0,
+        "alignY" : 96,
+        "width" : 262,
+        "alignX" : 134,
+        "type" : "D",
+        "audio" : "",
+        "frameDuration" : 50,
+        "alignAudio" : 0,
+        "maxcount" : 5,
+        "folderName" : "bizi",
+        "height" : 192,
+        "frames" : 16,
+        "scaleWidth" : 450,
+        "rightIndex" : 32,
+        "alignIndexLst" : [
+          46
+        ],
+        "leftIndex" : 0,
+        "triggerType" : 2
+      },
+      "name" : "bizi",
+      "type" : "dynamic",
+      "reload" : 1
+    },
+    {
+      "data" : {
+        "looping" : 1,
+        "showUtilFinish" : 0,
+        "alignY" : 150,
+        "width" : 363,
+        "alignX" : 181,
+        "type" : "D",
+        "audio" : "",
+        "frameDuration" : 50,
+        "alignAudio" : 0,
+        "maxcount" : 5,
+        "folderName" : "erduo",
+        "height" : 148,
+        "frames" : 20,
+        "scaleWidth" : 180,
+        "rightIndex" : 32,
+        "alignIndexLst" : [
+          43
+        ],
+        "leftIndex" : 0,
+        "triggerType" : 2
+      },
+      "name" : "erduo",
+      "type" : "dynamic",
+      "reload" : 1
+    },
+    {
+      "data" : {
+        "looping" : 1,
+        "showUtilFinish" : 0,
+        "alignY" : 85,
+        "width" : 271,
+        "alignX" : 136,
+        "type" : "D",
+        "audio" : "",
+        "frameDuration" : 50,
+        "alignAudio" : 0,
+        "maxcount" : 5,
+        "folderName" : "sh",
+        "height" : 143,
+        "frames" : 1,
+        "scaleWidth" : 200,
+        "rightIndex" : 32,
+        "alignIndexLst" : [
+          46
+        ],
+        "leftIndex" : 0,
+        "triggerType" : 2
+      },
+      "name" : "sh",
+      "type" : "dynamic",
+      "reload" : 1
+    },
+    {
+      "data" : {
+        "looping" : 1,
+        "showUtilFinish" : 0,
+        "alignY" : 15,
+        "width" : 253,
+        "alignX" : 130,
+        "type" : "D",
+        "alignAudio" : 0,
+        "frameDuration" : 50,
+        "maxcount" : 5,
+        "folderName" : "yanlei",
+        "height" : 193,
+        "frames" : 76,
+        "scaleWidth" : 250,
+        "rightIndex" : 32,
+        "alignIndexLst" : [
+          43
+        ],
+        "leftIndex" : 0,
+        "triggerType" : 2
+      },
+      "name" : "yanlei",
+      "type" : "dynamic",
+      "reload" : 1
+    }
+  ],
+  "initsection" : "config",
+  "version" : 1,
+  "type" : "multi",
+  "statemachine" : [
+    {
+      "newsection" : "config",
+      "oldsection" : "config",
+      "triggerType" : 10,
+      "sectionduration" : 0
+    }
+  ],
+  "name" : "animal_zhuzhu_b"
+}

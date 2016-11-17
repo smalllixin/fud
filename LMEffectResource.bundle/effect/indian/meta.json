@@ -1,0 +1,28 @@
+{
+    "name": "indian",
+    "type": "dynamic",
+    "maxPersonCount": 1,
+    "position"  :   160,
+    "version": 1,
+    "filters": [
+        {
+            "leftIndex": 0,
+            "width": 338,
+            "looping": 1,
+            "type": "D",
+            "frameDuration": 50,
+            "alignIndexLst": [
+                46
+            ],
+            "showUtilFinish": 1,
+            "height": 564,
+            "scaleWidth": 250,
+            "alignX": 185,
+            "alignY": 350,
+            "frames": 19,
+            "folderName": "indian",
+            "rightIndex": 32,
+            "triggerType": 2
+        }
+    ]
+}

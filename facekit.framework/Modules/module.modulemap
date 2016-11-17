@@ -1,0 +1,6 @@
+framework module facekit {
+  umbrella header "facekit.h"
+
+  export *
+  module * { export * }
+}

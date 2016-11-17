@@ -1,0 +1,27 @@
+PODS:
+  - glm (0.9.7.6)
+  - GPUImage (0.1.7)
+
+DEPENDENCIES:
+  - glm (from `./glm`)
+  - GPUImage (from `git@github.com:smalllixin/GPUImage.git`, branch `faceu`)
+
+EXTERNAL SOURCES:
+  glm:
+    :path: ./glm
+  GPUImage:
+    :branch: faceu
+    :git: git@github.com:smalllixin/GPUImage.git
+
+CHECKOUT OPTIONS:
+  GPUImage:
+    :commit: 9e32c3f6305c3ef8ccfae05a5a84c963055ca061
+    :git: git@github.com:smalllixin/GPUImage.git
+
+SPEC CHECKSUMS:
+  glm: 3f1fcc1409243f9d0df35319bed04d5167997f26
+  GPUImage: bd7e201b9aa91e85f401ed7a6d9867a07a404693
+
+PODFILE CHECKSUM: 4b0902c9d5b0a7953ec4702e038a6e5bc1528571
+
+COCOAPODS: 1.0.1

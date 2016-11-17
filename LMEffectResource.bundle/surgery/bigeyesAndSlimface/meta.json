@@ -1,0 +1,22 @@
+{
+    "name"          :   "bigeyesAndSlimface",
+    "type"          :   "surgery",
+    "maxPersonCount":   1,
+    "glsl"          : 	"glsl",
+    "position"      :   140,
+    "version"       :   1,
+    "resources"     : [
+    ],
+    "pointIndexes"  : [
+        [
+            "9",
+            "16",
+            "23",
+            "46",
+            "74",
+            "77",
+            "13",
+            "19"
+        ]
+    ]
+}

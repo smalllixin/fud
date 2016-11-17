@@ -1,0 +1,212 @@
+{
+    "filterlist": [
+        {
+            "data": {
+                "audio": "",
+                "soundPlayMode": 0,
+                "foldername": "strongman",
+                "maxcount": 2,
+                "pointindexarray": [
+                    [
+                        6,
+                        16,
+                        26,
+                        46,
+                        74,
+                        77,
+                        84,
+                        90,
+                        13,
+                        19
+                    ],
+                    [
+                        6,
+                        16,
+                        26,
+                        46,
+                        74,
+                        77,
+                        84,
+                        90,
+                        13,
+                        19
+                    ]
+                ],
+                "reslist": [],
+                "resloadtype": 0,
+                "timeparam": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "triggerType": 2
+            },
+            "name": "strongman",
+            "reload": 1,
+            "type": "shapechange"
+        },
+        {
+            "name": "juhua",
+            "reload": 1,
+            "type": "dsticker",
+            "data": {
+                "type": "D",
+                "alignIndexLst": [
+                    43
+                ],
+                "alignX": 39,
+                "alignY": 200,
+                "scaleWidth": 200,
+                "leftIndex": 0,
+                "rightIndex": 32,
+                "width": 78,
+                "height": 89,
+                "frames": 31,
+                "folderName": "juhua",
+                "frameDuration": 50,
+                "triggerType": 2,
+                "looping": 1,
+                "showUtilFinish": 0,
+                "audio": "",
+                "alignAudio": 0,
+                "maxcount": 5
+            }
+        },
+        {
+            "name": "bizi",
+            "reload": 1,
+            "type": "dsticker",
+            "data": {
+                "type": "D",
+                "alignIndexLst": [
+                    46
+                ],
+                "alignX": 134,
+                "alignY": 96,
+                "scaleWidth": 450,
+                "leftIndex": 0,
+                "rightIndex": 32,
+                "width": 262,
+                "height": 192,
+                "frames": 16,
+                "folderName": "bizi",
+                "frameDuration": 50,
+                "triggerType": 2,
+                "looping": 1,
+                "showUtilFinish": 0,
+                "audio": "",
+                "alignAudio": 0,
+                "maxcount": 5
+            }
+        },
+        {
+            "name": "erduo",
+            "reload": 1,
+            "type": "dsticker",
+            "data": {
+                "type": "D",
+                "alignIndexLst": [
+                    43
+                ],
+                "alignX": 181,
+                "alignY": 150,
+                "scaleWidth": 180,
+                "leftIndex": 0,
+                "rightIndex": 32,
+                "width": 363,
+                "height": 148,
+                "frames": 20,
+                "folderName": "erduo",
+                "frameDuration": 50,
+                "triggerType": 2,
+                "looping": 1,
+                "showUtilFinish": 0,
+                "audio": "",
+                "alignAudio": 0,
+                "maxcount": 5
+            }
+        },
+        {
+            "name": "sh",
+            "reload": 1,
+            "type": "dsticker",
+            "data": {
+                "type": "D",
+                "alignIndexLst": [
+                    46
+                ],
+                "alignX": 136,
+                "alignY": 85,
+                "scaleWidth": 200,
+                "leftIndex": 0,
+                "rightIndex": 32,
+                "width": 271,
+                "height": 143,
+                "frames": 1,
+                "folderName": "sh",
+                "frameDuration": 50,
+                "triggerType": 2,
+                "looping": 1,
+                "showUtilFinish": 0,
+                "audio": "",
+                "alignAudio": 0,
+                "maxcount": 5
+            }
+        },
+        {
+            "name": "yanlei",
+            "reload": 1,
+            "type": "dsticker",
+            "data": {
+                "type": "D",
+                "alignIndexLst": [
+                    43
+                ],
+                "alignX": 130,
+                "alignY": 15,
+                "scaleWidth": 250,
+                "leftIndex": 0,
+                "rightIndex": 32,
+                "width": 253,
+                "height": 193,
+                "frames": 76,
+                "folderName": "yanlei",
+                "frameDuration": 50,
+                "triggerType": 2,
+                "looping": 1,
+                "showUtilFinish": 0,
+                "alignAudio": 0,
+                "maxcount": 5
+            }
+        }
+    ],
+    "sections": [
+        {
+            "sectionname": "config",
+            "tips": "",
+            "duration": 3,
+            "filterlist": [
+                "strongman",
+                "bizi",
+                "erduo",
+                "juhua",
+                "yanlei",
+                "sh"
+            ]
+        }
+    ],
+    "statemachine": [
+        {
+            "oldsection": "config",
+            "triggerType": 10,
+            "newsection": "config",
+            "sectionduration": 0
+        }
+    ],
+    "initsection": "config"
+}

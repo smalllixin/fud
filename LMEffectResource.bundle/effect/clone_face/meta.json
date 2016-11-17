@@ -1,0 +1,34 @@
+{
+    "name"		: 	"clone_face",
+    "type"		: 	"multi",
+    "maxPersonCount" : 2,
+    "position"  :   160,
+    "version" 	: 	1,
+    "initsection": "s1",
+    "sections": [
+                 {
+                 "duration": 0,
+                 "filterlist": [
+                                "clone_face"
+                                ],
+                 "sectionname": "exch",
+                 "tips": ""
+                 }
+                 ],
+    "statemachine": [
+                     {
+                     "oldsection": "exch",
+                     "triggerType": 1111,
+                     "newsection": "exch"
+                     }
+                     ],
+    "filters"   :   [
+                     {
+                     "name": "clone_face",
+                     "reload": 1,
+                     "type": "clone_face",
+                     "data" : {
+                     }
+                     }
+                     ]
+}

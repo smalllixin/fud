@@ -1,0 +1,27 @@
+{
+  "name": "glm",
+  "version": "0.9.7.6",
+  "summary": "glm.",
+  "description": "Faceu facekit",
+  "homepage": "http://EXAMPLE/facekit",
+  "license": "",
+  "authors": {
+    "smalllixin": "smalllixin@gmail.com"
+  },
+  "source": {
+    "git": "git@github.com:g-truc/glm.git",
+    "tag": "0.9.7.6"
+  },
+  "source_files": "glm/**/*{.h,.hpp}",
+  "exclude_files": "Classes/Exclude",
+  "public_header_files": "glm/**/*{.h,.hpp,.inl}",
+  "preserve_paths": "glm/**/*{.h,.hpp,.inl}",
+  "header_mappings_dir": "glm",
+  "requires_arc": false,
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
+}

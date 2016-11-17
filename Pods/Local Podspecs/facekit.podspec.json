@@ -1,0 +1,30 @@
+{
+  "name": "facekit",
+  "version": "0.0.1",
+  "summary": "facekit.",
+  "description": "Faceu facekit",
+  "homepage": "http://EXAMPLE/facekit",
+  "license": "",
+  "authors": {
+    "smalllixin": "smalllixin@gmail.com"
+  },
+  "source": {
+    "git": "http://121.199.60.248:90/iOS/facekit.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "facekit",
+    "facekit/**/*.{h,m}"
+  ],
+  "exclude_files": "Classes/Exclude",
+  "vendored_libraries": [
+    "facekit/libyuv/libyuv.a",
+    ""
+  ],
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
+}

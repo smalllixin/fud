@@ -1,0 +1,8 @@
+{
+	"name"		: 	"beauty2",
+    "type"		: 	"beauty",
+    "glsl" 		: 	"glsl",
+    "position"  :   100,
+	"resources" : 	[],
+	"version" 	: 	1
+}

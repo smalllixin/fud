@@ -1,0 +1,1 @@
+{"itemList":[{"showTop":0,"frameDuration":50,"showUtilFinish":1,"height":640,"frames":122,"width":360,"folderName":"bg","looping":1,"type":"V","triggerType":2}]}

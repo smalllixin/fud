@@ -1,0 +1,33 @@
+{
+    "name"          :   "snakeface",
+    "type"          :   "surgery",
+    "maxPersonCount":   2,
+    "glsl"          : 	"glsl",
+    "position"      :   140,
+    "version"       :   1,
+    "resources"     : [
+        "pict1.png"
+    ],
+    "pointIndexes"  : [
+        [
+            "9",
+            "16",
+            "23",
+            "46",
+            "74",
+            "77",
+            "84",
+            "90"
+        ],
+        [
+            "9",
+            "16",
+            "23",
+            "46",
+            "74",
+            "77",
+            "84",
+            "90"
+        ]
+    ]
+}

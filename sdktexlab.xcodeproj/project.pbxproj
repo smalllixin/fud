@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22D13C03B9D1A297AFEFE0FA /* libPods-sdktexlab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 408AE21902B58E15A6A8D5D2 /* libPods-sdktexlab.a */; };
+		2707F7711D5866AC002A569D /* facekit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2707F7701D5866AC002A569D /* facekit.framework */; };
+		2718FD751D7698790076AEBE /* GPUFacekitOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 2718FD741D7698790076AEBE /* GPUFacekitOutput.m */; };
+		273980C91D6EBC52004AEB1B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 273980C81D6EBC52004AEB1B /* libz.tbd */; };
+		27855BCC1D4A4B8900F9F723 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27855BCB1D4A4B8900F9F723 /* main.m */; };
+		27855BCF1D4A4B8900F9F723 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27855BCE1D4A4B8900F9F723 /* AppDelegate.m */; };
+		27855BD21D4A4B8900F9F723 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27855BD11D4A4B8900F9F723 /* ViewController.m */; };
+		27855BD51D4A4B8900F9F723 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27855BD31D4A4B8900F9F723 /* Main.storyboard */; };
+		27855BD71D4A4B8900F9F723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27855BD61D4A4B8900F9F723 /* Assets.xcassets */; };
+		27855BDA1D4A4B8900F9F723 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27855BD81D4A4B8900F9F723 /* LaunchScreen.storyboard */; };
+		27855BE31D4A4BFD00F9F723 /* LMCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 27855BE21D4A4BFD00F9F723 /* LMCamera.m */; };
+		27855BE71D4A59F600F9F723 /* LMGLContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 27855BE61D4A59F600F9F723 /* LMGLContext.m */; };
+		27855BE91D4A5A6300F9F723 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27855BE81D4A5A6300F9F723 /* OpenGLES.framework */; };
+		27855BEC1D4A5B2800F9F723 /* LMGLPreviewView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27855BEB1D4A5B2800F9F723 /* LMGLPreviewView.mm */; };
+		27855BF21D4A6AEE00F9F723 /* LMProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 27855BF11D4A6AEE00F9F723 /* LMProgram.m */; };
+		27855BF41D4AF33600F9F723 /* LMEffectResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 27855BF31D4AF33600F9F723 /* LMEffectResource.bundle */; };
+		279AC2101D7915BB00AC25A0 /* megvii_facepp_model in Resources */ = {isa = PBXBuildFile; fileRef = 279AC20F1D79151600AC25A0 /* megvii_facepp_model */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		272EB5EB1D4B512B0063C628 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2707F7701D5866AC002A569D /* facekit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = facekit.framework; sourceTree = "<group>"; };
+		2718FD731D7698790076AEBE /* GPUFacekitOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUFacekitOutput.h; sourceTree = "<group>"; };
+		2718FD741D7698790076AEBE /* GPUFacekitOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUFacekitOutput.m; sourceTree = "<group>"; };
+		273980C81D6EBC52004AEB1B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		27855BC71D4A4B8900F9F723 /* sdktexlab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sdktexlab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27855BCB1D4A4B8900F9F723 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27855BCD1D4A4B8900F9F723 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		27855BCE1D4A4B8900F9F723 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		27855BD01D4A4B8900F9F723 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		27855BD11D4A4B8900F9F723 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		27855BD41D4A4B8900F9F723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27855BD61D4A4B8900F9F723 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27855BD91D4A4B8900F9F723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27855BDB1D4A4B8900F9F723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27855BE11D4A4BFD00F9F723 /* LMCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMCamera.h; sourceTree = "<group>"; };
+		27855BE21D4A4BFD00F9F723 /* LMCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMCamera.m; sourceTree = "<group>"; };
+		27855BE51D4A59F600F9F723 /* LMGLContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMGLContext.h; sourceTree = "<group>"; };
+		27855BE61D4A59F600F9F723 /* LMGLContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMGLContext.m; sourceTree = "<group>"; };
+		27855BE81D4A5A6300F9F723 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		27855BEA1D4A5B2800F9F723 /* LMGLPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMGLPreviewView.h; sourceTree = "<group>"; };
+		27855BEB1D4A5B2800F9F723 /* LMGLPreviewView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LMGLPreviewView.mm; sourceTree = "<group>"; };
+		27855BF01D4A6AEE00F9F723 /* LMProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMProgram.h; sourceTree = "<group>"; };
+		27855BF11D4A6AEE00F9F723 /* LMProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMProgram.m; sourceTree = "<group>"; };
+		27855BF31D4AF33600F9F723 /* LMEffectResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LMEffectResource.bundle; sourceTree = "<group>"; };
+		279AC20F1D79151600AC25A0 /* megvii_facepp_model */ = {isa = PBXFileReference; lastKnownFileType = file; path = megvii_facepp_model; sourceTree = "<group>"; };
+		408AE21902B58E15A6A8D5D2 /* libPods-sdktexlab.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sdktexlab.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CE9E05F483841B1DADBA1CC /* Pods-sdktexlab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdktexlab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sdktexlab/Pods-sdktexlab.debug.xcconfig"; sourceTree = "<group>"; };
+		C05C589DC417EB6F00F2408C /* Pods-sdktexlab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdktexlab.release.xcconfig"; path = "Pods/Target Support Files/Pods-sdktexlab/Pods-sdktexlab.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27855BC41D4A4B8900F9F723 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				273980C91D6EBC52004AEB1B /* libz.tbd in Frameworks */,
+				27855BE91D4A5A6300F9F723 /* OpenGLES.framework in Frameworks */,
+				2707F7711D5866AC002A569D /* facekit.framework in Frameworks */,
+				22D13C03B9D1A297AFEFE0FA /* libPods-sdktexlab.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27855BBE1D4A4B8900F9F723 = {
+			isa = PBXGroup;
+			children = (
+				279AC20F1D79151600AC25A0 /* megvii_facepp_model */,
+				2707F7701D5866AC002A569D /* facekit.framework */,
+				27855BF31D4AF33600F9F723 /* LMEffectResource.bundle */,
+				27855BC91D4A4B8900F9F723 /* sdktexlab */,
+				27855BC81D4A4B8900F9F723 /* Products */,
+				E0C606C23F74EC77F6D0A2CE /* Pods */,
+				F5FBA1FFCE892FA11EA7D8E1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		27855BC81D4A4B8900F9F723 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27855BC71D4A4B8900F9F723 /* sdktexlab.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27855BC91D4A4B8900F9F723 /* sdktexlab */ = {
+			isa = PBXGroup;
+			children = (
+				27855BE41D4A597B00F9F723 /* simplegl */,
+				27855BE11D4A4BFD00F9F723 /* LMCamera.h */,
+				27855BE21D4A4BFD00F9F723 /* LMCamera.m */,
+				2718FD731D7698790076AEBE /* GPUFacekitOutput.h */,
+				2718FD741D7698790076AEBE /* GPUFacekitOutput.m */,
+				27855BCD1D4A4B8900F9F723 /* AppDelegate.h */,
+				27855BCE1D4A4B8900F9F723 /* AppDelegate.m */,
+				27855BD01D4A4B8900F9F723 /* ViewController.h */,
+				27855BD11D4A4B8900F9F723 /* ViewController.m */,
+				27855BD31D4A4B8900F9F723 /* Main.storyboard */,
+				27855BD61D4A4B8900F9F723 /* Assets.xcassets */,
+				27855BD81D4A4B8900F9F723 /* LaunchScreen.storyboard */,
+				27855BDB1D4A4B8900F9F723 /* Info.plist */,
+				27855BCA1D4A4B8900F9F723 /* Supporting Files */,
+			);
+			path = sdktexlab;
+			sourceTree = "<group>";
+		};
+		27855BCA1D4A4B8900F9F723 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27855BCB1D4A4B8900F9F723 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27855BE41D4A597B00F9F723 /* simplegl */ = {
+			isa = PBXGroup;
+			children = (
+				27855BF01D4A6AEE00F9F723 /* LMProgram.h */,
+				27855BF11D4A6AEE00F9F723 /* LMProgram.m */,
+				27855BE51D4A59F600F9F723 /* LMGLContext.h */,
+				27855BE61D4A59F600F9F723 /* LMGLContext.m */,
+				27855BEA1D4A5B2800F9F723 /* LMGLPreviewView.h */,
+				27855BEB1D4A5B2800F9F723 /* LMGLPreviewView.mm */,
+			);
+			path = simplegl;
+			sourceTree = "<group>";
+		};
+		E0C606C23F74EC77F6D0A2CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CE9E05F483841B1DADBA1CC /* Pods-sdktexlab.debug.xcconfig */,
+				C05C589DC417EB6F00F2408C /* Pods-sdktexlab.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F5FBA1FFCE892FA11EA7D8E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				273980C81D6EBC52004AEB1B /* libz.tbd */,
+				27855BE81D4A5A6300F9F723 /* OpenGLES.framework */,
+				408AE21902B58E15A6A8D5D2 /* libPods-sdktexlab.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27855BC61D4A4B8900F9F723 /* sdktexlab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27855BDE1D4A4B8900F9F723 /* Build configuration list for PBXNativeTarget "sdktexlab" */;
+			buildPhases = (
+				86060023FB477C09291CDDEB /* [CP] Check Pods Manifest.lock */,
+				27855BC31D4A4B8900F9F723 /* Sources */,
+				27855BC41D4A4B8900F9F723 /* Frameworks */,
+				27855BC51D4A4B8900F9F723 /* Resources */,
+				DAECEA9FEEEFE51F17F189F8 /* [CP] Embed Pods Frameworks */,
+				98E421E17390DB9D08D58F7B /* [CP] Copy Pods Resources */,
+				272EB5EB1D4B512B0063C628 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sdktexlab;
+			productName = sdktexlab;
+			productReference = 27855BC71D4A4B8900F9F723 /* sdktexlab.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27855BBF1D4A4B8900F9F723 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = faceu;
+				TargetAttributes = {
+					27855BC61D4A4B8900F9F723 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = X2JNK7LY8J;
+					};
+				};
+			};
+			buildConfigurationList = 27855BC21D4A4B8900F9F723 /* Build configuration list for PBXProject "sdktexlab" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27855BBE1D4A4B8900F9F723;
+			productRefGroup = 27855BC81D4A4B8900F9F723 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27855BC61D4A4B8900F9F723 /* sdktexlab */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27855BC51D4A4B8900F9F723 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27855BDA1D4A4B8900F9F723 /* LaunchScreen.storyboard in Resources */,
+				27855BF41D4AF33600F9F723 /* LMEffectResource.bundle in Resources */,
+				27855BD71D4A4B8900F9F723 /* Assets.xcassets in Resources */,
+				279AC2101D7915BB00AC25A0 /* megvii_facepp_model in Resources */,
+				27855BD51D4A4B8900F9F723 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		86060023FB477C09291CDDEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		98E421E17390DB9D08D58F7B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sdktexlab/Pods-sdktexlab-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAECEA9FEEEFE51F17F189F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sdktexlab/Pods-sdktexlab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27855BC31D4A4B8900F9F723 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27855BF21D4A6AEE00F9F723 /* LMProgram.m in Sources */,
+				2718FD751D7698790076AEBE /* GPUFacekitOutput.m in Sources */,
+				27855BD21D4A4B8900F9F723 /* ViewController.m in Sources */,
+				27855BEC1D4A5B2800F9F723 /* LMGLPreviewView.mm in Sources */,
+				27855BCF1D4A4B8900F9F723 /* AppDelegate.m in Sources */,
+				27855BE71D4A59F600F9F723 /* LMGLContext.m in Sources */,
+				27855BCC1D4A4B8900F9F723 /* main.m in Sources */,
+				27855BE31D4A4BFD00F9F723 /* LMCamera.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		27855BD31D4A4B8900F9F723 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27855BD41D4A4B8900F9F723 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27855BD81D4A4B8900F9F723 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27855BD91D4A4B8900F9F723 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27855BDC1D4A4B8900F9F723 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		27855BDD1D4A4B8900F9F723 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27855BDF1D4A4B8900F9F723 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CE9E05F483841B1DADBA1CC /* Pods-sdktexlab.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = sdktexlab/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.whatever.faceu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		27855BE01D4A4B8900F9F723 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C05C589DC417EB6F00F2408C /* Pods-sdktexlab.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = sdktexlab/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.whatever.faceu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27855BC21D4A4B8900F9F723 /* Build configuration list for PBXProject "sdktexlab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27855BDC1D4A4B8900F9F723 /* Debug */,
+				27855BDD1D4A4B8900F9F723 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27855BDE1D4A4B8900F9F723 /* Build configuration list for PBXNativeTarget "sdktexlab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27855BDF1D4A4B8900F9F723 /* Debug */,
+				27855BE01D4A4B8900F9F723 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27855BBF1D4A4B8900F9F723 /* Project object */;
+}

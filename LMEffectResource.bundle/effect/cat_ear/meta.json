@@ -1,0 +1,49 @@
+{
+	"name"		: 	"cat ear",
+    "type"		: 	"dynamic",
+    "tips"      :   "露脸就行",
+    "maxPersonCount" : 5,
+    "position"  :   160,
+	"version" 	: 	1,
+	"filters": [
+				{
+						"leftIndex": 0,
+						"width": 320,
+						"looping": 1,
+						"type": "D",
+						"frameDuration": 50,
+						"alignIndexLst": [
+							35,
+							40
+						],
+						"showUtilFinish": 0,
+						"height": 179,
+						"scaleWidth": 220,
+						"alignX": 160,
+						"alignY": 140,
+						"frames": 80,
+						"folderName": "ear",
+						"rightIndex": 32,
+						"triggerType": 2
+					},
+					{
+						"leftIndex": 0,
+						"width": 320,
+						"looping": 1,
+						"type": "D",
+						"frameDuration": 50,
+						"alignIndexLst": [
+							46
+						],
+						"showUtilFinish": 0,
+						"height": 104,
+						"scaleWidth": 220,
+						"alignX": 160,
+						"alignY": 52,
+						"frames": 80,
+						"folderName": "moustache",
+						"rightIndex": 32,
+						"triggerType": 2
+					}
+				]
+}

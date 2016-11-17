@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "96E400600636C6BB25692DD2DEBC9E2AAAD2F6B8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D6DF976AA6D14491C2314E8D1201C07F43E39CD1" : 0,
+    "96E400600636C6BB25692DD2DEBC9E2AAAD2F6B8" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A2F01E9C-6AFD-48C7-AD5E-E8F2AD16C37E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D6DF976AA6D14491C2314E8D1201C07F43E39CD1" : "facekit\/sdktexlab\/glm\/",
+    "96E400600636C6BB25692DD2DEBC9E2AAAD2F6B8" : "facekit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "sdktexlab",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "sdktexlab\/sdktexlab.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "121.199.60.248:iOS\/facekit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "96E400600636C6BB25692DD2DEBC9E2AAAD2F6B8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:g-truc\/glm.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D6DF976AA6D14491C2314E8D1201C07F43E39CD1"
+    }
+  ]
+}

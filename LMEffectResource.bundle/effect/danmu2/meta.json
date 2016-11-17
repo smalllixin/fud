@@ -1,0 +1,21 @@
+{
+  "version" : 1,
+  "maxPersonCount" : 5,
+  "filters" : [
+    {
+      "height" : 640,
+      "frames" : 122,
+      "looping" : 1,
+      "showTop" : 0,
+      "width" : 360,
+      "frameDuration" : 50,
+      "folderName" : "bg",
+      "showUtilFinish" : 1,
+      "type" : "V",
+      "triggerType" : 2
+    }
+  ],
+  "name" : "danmu2",
+  "type" : "dynamic",
+  "position" : 160
+}
