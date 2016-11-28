@@ -23,7 +23,6 @@
 		27855BEC1D4A5B2800F9F723 /* LMGLPreviewView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27855BEB1D4A5B2800F9F723 /* LMGLPreviewView.mm */; };
 		27855BF21D4A6AEE00F9F723 /* LMProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 27855BF11D4A6AEE00F9F723 /* LMProgram.m */; };
 		27855BF41D4AF33600F9F723 /* LMEffectResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 27855BF31D4AF33600F9F723 /* LMEffectResource.bundle */; };
-		279AC2101D7915BB00AC25A0 /* megvii_facepp_model in Resources */ = {isa = PBXBuildFile; fileRef = 279AC20F1D79151600AC25A0 /* megvii_facepp_model */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,7 +63,6 @@
 		27855BF01D4A6AEE00F9F723 /* LMProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMProgram.h; sourceTree = "<group>"; };
 		27855BF11D4A6AEE00F9F723 /* LMProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMProgram.m; sourceTree = "<group>"; };
 		27855BF31D4AF33600F9F723 /* LMEffectResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LMEffectResource.bundle; sourceTree = "<group>"; };
-		279AC20F1D79151600AC25A0 /* megvii_facepp_model */ = {isa = PBXFileReference; lastKnownFileType = file; path = megvii_facepp_model; sourceTree = "<group>"; };
 		408AE21902B58E15A6A8D5D2 /* libPods-sdktexlab.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sdktexlab.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE9E05F483841B1DADBA1CC /* Pods-sdktexlab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdktexlab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sdktexlab/Pods-sdktexlab.debug.xcconfig"; sourceTree = "<group>"; };
 		C05C589DC417EB6F00F2408C /* Pods-sdktexlab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdktexlab.release.xcconfig"; path = "Pods/Target Support Files/Pods-sdktexlab/Pods-sdktexlab.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 		27855BBE1D4A4B8900F9F723 = {
 			isa = PBXGroup;
 			children = (
-				279AC20F1D79151600AC25A0 /* megvii_facepp_model */,
 				2707F7701D5866AC002A569D /* facekit.framework */,
 				27855BF31D4AF33600F9F723 /* LMEffectResource.bundle */,
 				27855BC91D4A4B8900F9F723 /* sdktexlab */,
@@ -232,7 +229,6 @@
 				27855BDA1D4A4B8900F9F723 /* LaunchScreen.storyboard in Resources */,
 				27855BF41D4AF33600F9F723 /* LMEffectResource.bundle in Resources */,
 				27855BD71D4A4B8900F9F723 /* Assets.xcassets in Resources */,
-				279AC2101D7915BB00AC25A0 /* megvii_facepp_model in Resources */,
 				27855BD51D4A4B8900F9F723 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

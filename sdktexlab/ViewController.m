@@ -11,13 +11,13 @@
 #import "LMGLPreviewView.h"
 #import "GPUFacekitOutput.h"
 
-#define USE_GPUIMAGE 1
+//#define USE_GPUIMAGE 1
 
 //
 static LMFilterPos LMFilterPosBeauty = 100;
 static LMFilterPos LMFilterPosFilter = 120;
-static LMFilterPos LMFilterPosReshape = 140;
-static LMFilterPos LMFilterPosSticker = 160;
+//static LMFilterPos LMFilterPosReshape = 140;
+//static LMFilterPos LMFilterPosSticker = 160;
 
 @interface ViewController ()<LMCameraOutput>
 
@@ -57,7 +57,7 @@ static LMFilterPos LMFilterPosSticker = 160;
     [_camera startCameraCapture];
 
 #ifdef USE_GPUIMAGE
-    LMRenderEngine *renderEngine = [LMRenderEngine engineForTextureWithGLContext:[GPUImageContext sharedImageProcessingContext].context queue:[GPUImageContext sharedContextQueue]];
+    LMRenderEngine *renderEngine = [LMRenderEngine engineForFacelessWithGLContext:[GPUImageContext sharedImageProcessingContext].context queue:[GPUImageContext sharedContextQueue]];
     _facekitOutput = [[GPUFacekitOutput alloc] initWithRenderEngine:renderEngine];
     _gpuImageView = [[GPUImageView alloc] initWithFrame:self.view.bounds];
     _gpuImageView.fillMode = kGPUImageFillModeStretch;
@@ -68,7 +68,7 @@ static LMFilterPos LMFilterPosSticker = 160;
     _facekitOutput.outputImageOrientation = UIInterfaceOrientationPortrait;
 #else
     _ctx = [[LMGLContext alloc] initWithShareGroup:nil];
-    LMRenderEngine *renderEngine = [LMRenderEngine engineForTextureWithGLContext:_ctx.c queue:_ctx.contextQueue];
+    LMRenderEngine *renderEngine = [LMRenderEngine engineForFacelessWithGLContext:_ctx.c queue:_ctx.contextQueue];
     _previewView = [[LMGLPreviewView alloc] initWithFrame:self.view.bounds andContext:_ctx];
     [self.view addSubview:_previewView];
     _previewView.renderEngine = renderEngine;
@@ -80,22 +80,6 @@ static LMFilterPos LMFilterPosSticker = 160;
     [self setupButtons];
     [self setupUI];
     [self setupAudioPlayer];
-    
-    //    [_renderEngine applyWithPath:[resBundle pathForResource:BeautySandbox(2) ofType:@""]];
-    //    [_renderEngine applyWithPath:[resBundle pathForResource:@"effect/maopa" ofType:@""]];
-    //    [_renderEngine applyWithPath:[resBundle pathForResource:@"effect/maoyao_mz" ofType:@""]];
-    //    [_renderEngine applyWithPath:[resBundle pathForResource:@"effect/shuijing_b" ofType:@""]];
-    //    [_renderEngine applyWithPath:[resBundle pathForResource:@"effect/animal_zhuzhu_b" ofType:@""]];
-    //    [_renderEngine applyWithPath:[resBundle pathForResource:@"effect/animal_mycat" ofType:@""]];
-    //    [_renderEngine applyWithPath:[resBundle pathForResource:@"effect/SikaDeer" ofType:@""]];
-    //    [_renderEngine applyBeautyLevelV2:kLMBeautyFilterLevel2];
-    //    [_renderEngine applyStickerWithName:@"effect/boomhair"];
-    //    [_renderEngine applyDayan];
-    
-    //    [_renderEngine applyStickerWithName:@"effect/indian"];
-    //    [_renderEngine applyStickerWithName:@"effect/cat_ear"];
-    //    [_renderEngine applyStickerWithName:@"effect/hiphop"];
-    //    [_renderEngine applyStickerWithName:@"effect/zhangcao"];
 }
 
 - (void)dealloc {
@@ -120,22 +104,6 @@ static LMFilterPos LMFilterPosSticker = 160;
                  @{@"tag":@(112), @"name": @"filter/filter2", @"title": @"滤镜3"},
                  @{@"tag":@(113), @"name": @"filter/filter3", @"title": @"滤镜4"},
                  @{@"tag":@(114), @"name": @"filter/filter4", @"title": @"滤镜5"},
-                 
-                 @{@"tag":@(150), @"name": @"surgery/bigeyes", @"title": @"大眼"},
-                 @{@"tag":@(151), @"name": @"surgery/bigeyesAndSlimface", @"title": @"大颜瘦脸"},
-                 @{@"tag":@(152), @"name": @"surgery/lovely", @"title": @"Cute脸"},
-                 @{@"tag":@(153), @"name": @"surgery/snakeface", @"title": @"蛇脸"},
-                 
-                 @{@"tag":@(1), @"name": @"effect/cat_ear", @"title": @"猫耳"},
-                 @{@"tag":@(2), @"name": @"effect/hiphop", @"title": @"嘻哈"},
-                 @{@"tag":@(3), @"name": @"effect/zhangcao", @"title": @"长草"},
-                 @{@"tag":@(4), @"name": @"effect/rifeng_b", @"title": @"扇子"},
-                 @{@"tag":@(5), @"name": @"effect/SikaDeer", @"title": @"鹿"},
-                 @{@"tag":@(6), @"name": @"effect/j3_gaibang", @"title": @"丐帮"},
-                 @{@"tag":@(8), @"name": @"effect/maopa", @"title": @"猫趴"},
-                 @{@"tag":@(9), @"name": @"effect/maoyao_mz", @"title": @"猫妖"},
-                 @{@"tag":@(11), @"name": @"effect/animal_zhuzhu_b", @"title": @"猪猪"},
-                 @{@"tag":@(12), @"name": @"effect/animal_mycat", @"title": @"手猫"},
                  ];
     
     CGFloat yStartPos = 22;
@@ -169,8 +137,6 @@ static LMFilterPos LMFilterPosSticker = 160;
     NSArray *closeBtns = @[
                            @{@"tag":@(LMFilterPosBeauty), @"title": @"关闭美颜" },
                            @{@"tag":@(LMFilterPosFilter), @"title": @"关闭滤镜" },
-                           @{@"tag":@(LMFilterPosReshape), @"title": @"关闭整形" },
-                           @{@"tag":@(LMFilterPosSticker), @"title": @"关闭贴纸" },
                            ];
     for (int i = 0; i < closeBtns.count; i ++) {
         NSDictionary *s = closeBtns[i];
@@ -274,6 +240,7 @@ static LMFilterPos LMFilterPosSticker = 160;
     CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
     OSType formatType = CVPixelBufferGetPixelFormatType(pixelBuffer);
     if (formatType == kCVPixelFormatType_32BGRA) {
+        [_renderEngine processPixelBuffer:pixelBuffer];
 #ifdef USE_GPUIMAGE
         [_facekitOutput processSampleBuffer:sampleBuffer];
 #else

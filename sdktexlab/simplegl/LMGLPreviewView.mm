@@ -257,11 +257,7 @@ const Vertex Rotate_90_Flip_Vertices[] = {
         }
 #endif
         GLuint renderedTexId;
-        if (_renderEngine) {
-            [_renderEngine processTexture:_videoTexture size:CGSizeMake(width,height) outputTexture:&renderedTexId];
-        } else {
-            renderedTexId = _videoTexture;
-        }
+        renderedTexId = _videoTexture;
         
         [_program use];
         glBindFramebuffer(GL_FRAMEBUFFER, _displayFrameBuffer);
