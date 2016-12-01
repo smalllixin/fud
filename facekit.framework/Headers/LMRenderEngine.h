@@ -21,7 +21,7 @@ typedef int LMFilterPos;
 + (LMRenderEngine*)engineForSamplebufferWithRenderQueue:(dispatch_queue_t)queue resBundle:(NSBundle*)resBundle;
 + (LMRenderEngine*)engineForTextureWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue;
 + (LMRenderEngine*)engineForTextureWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue faceless:(BOOL)faceless;
-//+ (LMRenderEngine*)engineForFacelessWithGLContext:(EAGLContext*)context;
++ (LMRenderEngine*)engineForFacelessWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue;
 
 
 #pragma mark - Input processors
@@ -39,6 +39,7 @@ typedef int LMFilterPos;
 #pragma mark - API for liberty
 - (LMFilterPos)applyWithPath:(NSString*)path;
 - (LMFilterPos)applyWithPath:(NSString*)path positionOffset:(int)positionOffset;
+- (LMFilterPos)applyWithPathes:(NSArray<NSString*>*)pathes positionOffset:(int)positionOffset;
 - (void)stopFilter:(LMFilterPos)pos;
 - (void)switchSmallMode:(LMSmallMode)smallMode;
 

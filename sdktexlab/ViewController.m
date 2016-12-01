@@ -134,6 +134,7 @@ static LMFilterPos LMFilterPosSticker = 160;
                  @{@"tag":@(6), @"name": @"effect/j3_gaibang", @"title": @"丐帮"},
                  @{@"tag":@(8), @"name": @"effect/maopa", @"title": @"猫趴"},
                  @{@"tag":@(9), @"name": @"effect/maoyao_mz", @"title": @"猫妖"},
+                 @{@"tag":@(10), @"name": @"effect/moshou", @"title": @"魔兽"},
                  @{@"tag":@(11), @"name": @"effect/animal_zhuzhu_b", @"title": @"猪猪"},
                  @{@"tag":@(12), @"name": @"effect/animal_mycat", @"title": @"手猫"},
                  ];
