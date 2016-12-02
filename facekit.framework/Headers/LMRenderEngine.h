@@ -18,7 +18,6 @@ typedef int LMFilterPos;
 
 @property (nonatomic, assign) BOOL useExternalFaceDetect;
 
-+ (LMRenderEngine*)engineForSamplebufferWithRenderQueue:(dispatch_queue_t)queue resBundle:(NSBundle*)resBundle;
 + (LMRenderEngine*)engineForTextureWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue;
 + (LMRenderEngine*)engineForTextureWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue faceless:(BOOL)faceless;
 + (LMRenderEngine*)engineForFacelessWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue;
