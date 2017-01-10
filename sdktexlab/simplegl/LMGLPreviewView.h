@@ -14,6 +14,7 @@
 
 - (id)initWithFrame:(CGRect)frame andContext:(LMGLContext*)context;
 @property (nonatomic, strong) LMRenderEngine *renderEngine;
+@property (nonatomic, strong) void (^processPixelbuffer)(CVPixelBufferRef pixelbuffer);
 
 // ONLY BGRA format PixelBuffer accepted.
 - (void)renderSampleBuffer:(CMSampleBufferRef)sampleBuffer;

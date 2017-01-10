@@ -26,6 +26,7 @@ static LMFilterPos LMFilterPosSticker = 160;
 #ifdef USE_GPUIMAGE
 @property (nonatomic, strong) GPUImageView *gpuImageView;
 @property (nonatomic, strong) GPUFacekitOutput *facekitOutput;
+@property (nonatomic, strong) GPUImageFilter *passthroughFilter;
 #else
 @property (nonatomic, strong) LMGLPreviewView *previewView;
 #endif
@@ -72,6 +73,15 @@ static LMFilterPos LMFilterPosSticker = 160;
     _previewView = [[LMGLPreviewView alloc] initWithFrame:self.view.bounds andContext:_ctx];
     [self.view addSubview:_previewView];
     _previewView.renderEngine = renderEngine;
+    [_previewView setProcessPixelbuffer:^(CVPixelBufferRef pixelBuffer) {
+        CVPixelBufferLockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
+        size_t w = CVPixelBufferGetWidth(pixelBuffer);
+        size_t h = CVPixelBufferGetHeight(pixelBuffer);
+//        void *addr = CVPixelBufferGetBaseAddress(pixelBuffer);
+        NSLog(@"%ld %ld", w, h);
+        CVPixelBufferUnlockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
+        
+    }];
 #endif
     NSBundle *resBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"LMEffectResource" ofType:@"bundle"]];
     _resBundle = resBundle;

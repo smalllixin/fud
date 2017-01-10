@@ -257,48 +257,18 @@ const Vertex Rotate_90_Flip_Vertices[] = {
         }
 #endif
         GLuint renderedTexId;
+        CVPixelBufferRef renderedPixelBuffer = NULL;
         if (_renderEngine) {
-            [_renderEngine processTexture:_videoTexture size:CGSizeMake(width,height) outputTexture:&renderedTexId];
+            [_renderEngine processTexture:_videoTexture size:CGSizeMake(width,height) outputTexture:&renderedTexId outputPixelBuffer:&renderedPixelBuffer];
         } else {
             renderedTexId = _videoTexture;
         }
         
-        [_program use];
-        glBindFramebuffer(GL_FRAMEBUFFER, _displayFrameBuffer);
+        if (self.processPixelbuffer) {
+            self.processPixelbuffer(renderedPixelBuffer);
+        }
         
-        glViewport(0, 0, _rbWidth, _rbHeight);
-        glClearColor(0, 0, 0, 1);
-        glClear(GL_COLOR_BUFFER_BIT);
-        
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, renderedTexId);
-        
-        glUniform1i([_program uniformIndex:@"inputImageTexture"], 0);
-        
-        //load vbo
-        glBindBuffer(GL_ARRAY_BUFFER, _videoVertexBuffer);
-        
-        //upload params
-        glVertexAttribPointer([_program attributeIndex:@"position"], 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
-        glVertexAttribPointer([_program attributeIndex:@"inputTextureCoordinate"], 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*) (sizeof(LMVec3)));
-        
-        //calculate modelview
-        glm::mat4 m;
-        m = glm::rotate(m, glm::pi<float>()/2, glm::vec3(0.0f, 0.0f, -1.0f));
-        //then flip
-        m = glm::scale(m, glm::vec3(1, -1, 1));
-        glUniformMatrix4fv([_program uniformIndex:@"Modelview"], 1, GL_FALSE, &m[0][0]);
-        
-        //render video
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _videoIndiceBuffer);
-        glDrawElements(GL_TRIANGLES, sizeof(Indices)/sizeof(Indices[0]), GL_UNSIGNED_BYTE, 0);
-        
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-        
-        //render sprite engine
-        //        [ss.director render];
-        
+        [self renderToFramebuffer:_displayFrameBuffer texId:renderedTexId];
         //refresh render buffer
         glBindFramebuffer(GL_FRAMEBUFFER, _displayFrameBuffer);
         CVPixelBufferUnlockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
@@ -313,6 +283,39 @@ const Vertex Rotate_90_Flip_Vertices[] = {
     }];
 }
 
-//- (void)renderYuvPixelBuffer;
+- (void)renderToFramebuffer:(GLuint)framebuffer texId:(GLuint)renderedTexId {
+    [_program use];
+    glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
+    
+    glViewport(0, 0, _rbWidth, _rbHeight);
+    glClearColor(0, 0, 0, 1);
+    glClear(GL_COLOR_BUFFER_BIT);
+    
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, renderedTexId);
+    
+    glUniform1i([_program uniformIndex:@"inputImageTexture"], 0);
+    
+    //load vbo
+    glBindBuffer(GL_ARRAY_BUFFER, _videoVertexBuffer);
+    
+    //upload params
+    glVertexAttribPointer([_program attributeIndex:@"position"], 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
+    glVertexAttribPointer([_program attributeIndex:@"inputTextureCoordinate"], 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*) (sizeof(LMVec3)));
+    
+    //calculate modelview
+    glm::mat4 m;
+    m = glm::rotate(m, glm::pi<float>()/2, glm::vec3(0.0f, 0.0f, -1.0f));
+    //then flip
+    m = glm::scale(m, glm::vec3(1, -1, 1));
+    glUniformMatrix4fv([_program uniformIndex:@"Modelview"], 1, GL_FALSE, &m[0][0]);
+    
+    //render video
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _videoIndiceBuffer);
+    glDrawElements(GL_TRIANGLES, sizeof(Indices)/sizeof(Indices[0]), GL_UNSIGNED_BYTE, 0);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+}
 
 @end

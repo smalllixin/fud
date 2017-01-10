@@ -31,9 +31,10 @@ typedef int LMFilterPos;
 // After get the processed outputTexId you can draw to the framebuffer for free.
 // The outputTexId will be validate before the next call of processTexture.
 - (void)processTexture:(GLuint)texId size:(CGSize)width outputTexture:(GLuint*)outputTexId;
+- (void)processTexture:(GLuint)texId size:(CGSize)size outputTexture:(GLuint*)outputTexId outputPixelBuffer:(CVPixelBufferRef*)pixeBuffer;
 
 // faceDetectPoints should be 106 points. NOT READY
-- (void)processTexture:(GLuint)texId size:(CGSize)width outputTexture:(GLuint *)outputTexId faces:(lm_ext_faces*)faces;
+//- (void)processTexture:(GLuint)texId size:(CGSize)width outputTexture:(GLuint *)outputTexId faces:(lm_ext_faces*)faces;
 
 #pragma mark - API for liberty
 - (LMFilterPos)applyWithPath:(NSString*)path;
