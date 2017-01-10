@@ -38,12 +38,14 @@ static LMFilterPos LMFilterPosSticker = 160;
 @property (nonatomic, strong) NSTimer *tipsTimer;
 
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
+@property (nonatomic, strong) UIView *containerView;
 
 @end
 
 @implementation ViewController {
     NSBundle *_resBundle;
     LMFilterPos _effectPos;
+    NSTimer *_fadeTimer;
 }
 
 - (void)viewDidLoad {
@@ -90,7 +92,12 @@ static LMFilterPos LMFilterPosSticker = 160;
     [self setupButtons];
     [self setupUI];
     [self setupAudioPlayer];
-    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapFocus:)];
+    [self.view addGestureRecognizer:tap];
+    [self.camera enableContinuousAutoFocus];
+    [self.camera enableContinuousAutoExposure];
+    [self.camera enableContinuousAutoWhiteBalance];
+    [self.camera setVideoHDREnable:YES];
     //    [_renderEngine applyWithPath:[resBundle pathForResource:BeautySandbox(2) ofType:@""]];
     //    [_renderEngine applyWithPath:[resBundle pathForResource:@"effect/maopa" ofType:@""]];
     //    [_renderEngine applyWithPath:[resBundle pathForResource:@"effect/maoyao_mz" ofType:@""]];
@@ -124,6 +131,9 @@ static LMFilterPos LMFilterPosSticker = 160;
                  @{@"tag":@(102), @"name": @"beauty/beauty2", @"title": @"美颜3"},
                  @{@"tag":@(103), @"name": @"beauty/beauty3", @"title": @"美颜4"},
                  @{@"tag":@(104), @"name": @"beauty/beauty4", @"title": @"美颜5"},
+                 @{@"tag":@(200), @"name": @"beauty/new_beauty0", @"title": @"new美颜1"},
+                 @{@"tag":@(201), @"name": @"beauty/new_beauty1", @"title": @"new美颜2"},
+                 @{@"tag":@(202), @"name": @"beauty/new_beauty2", @"title": @"new美颜3"},
                  
                  @{@"tag":@(110), @"name": @"filter/filter0", @"title": @"滤镜1"},
                  @{@"tag":@(111), @"name": @"filter/filter1", @"title": @"滤镜2"},
@@ -148,7 +158,8 @@ static LMFilterPos LMFilterPosSticker = 160;
                  @{@"tag":@(11), @"name": @"effect/animal_zhuzhu_b", @"title": @"猪猪"},
                  @{@"tag":@(12), @"name": @"effect/animal_mycat", @"title": @"手猫"},
                  ];
-    
+    _containerView = [[UIView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:_containerView];
     CGFloat yStartPos = 22;
     CGFloat width = 100;
     CGFloat height = 44;
@@ -165,7 +176,7 @@ static LMFilterPos LMFilterPosSticker = 160;
         btn.tag = [s[@"tag"] integerValue];
         [btn setTitle:s[@"title"] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(onPressed:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:btn];
+        [_containerView addSubview:btn];
         y += height + 1;
         
         if (y + height > winHeight) {
@@ -190,7 +201,7 @@ static LMFilterPos LMFilterPosSticker = 160;
         btn.tag = [s[@"tag"] integerValue];
         [btn setTitle:s[@"title"] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(onClosePressed:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:btn];
+        [_containerView addSubview:btn];
         y += height + 1;
         
         if (y + height > winHeight) {
@@ -198,6 +209,16 @@ static LMFilterPos LMFilterPosSticker = 160;
             x += width + 1;
         }
     }
+    
+    UIButton *cameraRotateButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_containerView addSubview:cameraRotateButton];
+    [cameraRotateButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [cameraRotateButton setTitle:@"切换摄像头" forState:UIControlStateNormal];
+    [cameraRotateButton addTarget:self action:@selector(rotateCamera) forControlEvents:UIControlEventTouchUpInside];
+    [cameraRotateButton sizeToFit];
+    cameraRotateButton.frame = CGRectMake(self.view.frame.size.width - cameraRotateButton.frame.size.width,
+                                          self.view.frame.size.height - cameraRotateButton.frame.size.height,
+                                          cameraRotateButton.frame.size.width, cameraRotateButton.frame.size.height);
 }
 
 - (void)onPressed:(UIButton*)btn {
@@ -235,6 +256,22 @@ static LMFilterPos LMFilterPosSticker = 160;
 
 - (void)offFace {
     [_renderEngine enableFaceDetect:NO];
+}
+
+- (void)rotateCamera {
+    [_camera rotateCamera];
+    NSLog(@"rotateCamera");
+}
+
+- (void)singleTapFocus:(UITapGestureRecognizer*)gesture {
+    [_fadeTimer invalidate];
+    _fadeTimer = [NSTimer scheduledTimerWithTimeInterval:2.5f target:self selector:@selector(fadeInContainer) userInfo:nil repeats:NO];
+    _containerView.hidden = YES;
+    [self.camera lockExposureAndFocusAtPointOfInterest:[gesture locationInView:self.view]];
+}
+
+- (void)fadeInContainer {
+    _containerView.hidden = NO;
 }
 
 #pragma mark - tips
