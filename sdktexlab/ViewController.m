@@ -71,7 +71,7 @@ static LMFilterPos LMFilterPosSticker = 160;
     _facekitOutput.outputImageOrientation = UIInterfaceOrientationPortrait;
 #else
     _ctx = [[LMGLContext alloc] initWithShareGroup:nil];
-    LMRenderEngine *renderEngine = [LMRenderEngine engineForTextureWithGLContext:_ctx.c queue:_ctx.contextQueue];
+    LMRenderEngine *renderEngine = [LMRenderEngine engineForTextureWithGLContext:_ctx.c queue:_ctx.contextQueue faceless:NO portraitOutput:YES];
     _previewView = [[LMGLPreviewView alloc] initWithFrame:self.view.bounds andContext:_ctx];
     [self.view addSubview:_previewView];
     _previewView.renderEngine = renderEngine;

@@ -17,15 +17,18 @@ typedef int LMFilterPos;
 @interface LMRenderEngine : NSObject
 
 @property (nonatomic, assign) BOOL useExternalFaceDetect;
+@property (nonatomic, assign, readonly) BOOL portraitOutput;
 
 + (LMRenderEngine*)engineForTextureWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue;
 + (LMRenderEngine*)engineForTextureWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue faceless:(BOOL)faceless;
 + (LMRenderEngine*)engineForFacelessWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue;
+#pragma mark - Unstable ctor
++ (LMRenderEngine*)engineForTextureWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue faceless:(BOOL)faceless portraitOutput:(BOOL)portraitOutput;
 
 
 #pragma mark - Input processors
 // All of process are syncrhonise method
-- (CMSampleBufferRef)processSampleBuffer:(CMSampleBufferRef)sampleBuffer;
+//- (CMSampleBufferRef)processSampleBuffer:(CMSampleBufferRef)sampleBuffer;
 - (CVPixelBufferRef)processPixelBuffer:(CVPixelBufferRef)pixelBuffer;
 // Call process texture on the rendering thread. RenderEngine manage outputTexId resource.
 // After get the processed outputTexId you can draw to the framebuffer for free.
