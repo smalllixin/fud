@@ -76,12 +76,23 @@ static LMFilterPos LMFilterPosSticker = 160;
     [self.view addSubview:_previewView];
     _previewView.renderEngine = renderEngine;
     [_previewView setProcessPixelbuffer:^(CVPixelBufferRef pixelBuffer) {
-        CVPixelBufferLockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
-        size_t w = CVPixelBufferGetWidth(pixelBuffer);
-        size_t h = CVPixelBufferGetHeight(pixelBuffer);
-//        void *addr = CVPixelBufferGetBaseAddress(pixelBuffer);
-        NSLog(@"%ld %ld", w, h);
-        CVPixelBufferUnlockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
+//        CVPixelBufferLockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
+//        size_t w = CVPixelBufferGetWidth(pixelBuffer);
+//        size_t h = CVPixelBufferGetHeight(pixelBuffer);
+////        void *addr = CVPixelBufferGetBaseAddress(pixelBuffer);
+//        CIImage *ciImage = [CIImage imageWithCVPixelBuffer:pixelBuffer];
+//        
+//        CIContext *temporaryContext = [CIContext contextWithOptions:nil];
+//        CGImageRef videoImage = [temporaryContext
+//                                 createCGImage:ciImage
+//                                 fromRect:CGRectMake(0, 0,
+//                                                     CVPixelBufferGetWidth(pixelBuffer),
+//                                                     CVPixelBufferGetHeight(pixelBuffer))];
+//        
+//        UIImage *uiImage = [UIImage imageWithCGImage:videoImage];
+//        CGImageRelease(videoImage);
+//        NSLog(@"%ld %ld", w, h);
+//        CVPixelBufferUnlockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
         
     }];
 #endif

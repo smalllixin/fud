@@ -307,9 +307,10 @@ const Vertex Rotate_90_Flip_Vertices[] = {
     glm::mat4 m;
     if (!_renderEngine.portraitOutput) {
         m = glm::rotate(m, glm::pi<float>()/2, glm::vec3(0.0f, 0.0f, -1.0f));
+        //then flip
+        m = glm::scale(m, glm::vec3(1, -1, 1));
     }
-    //then flip
-    m = glm::scale(m, glm::vec3(1, -1, 1));
+    
     glUniformMatrix4fv([_program uniformIndex:@"Modelview"], 1, GL_FALSE, &m[0][0]);
     
     //render video
