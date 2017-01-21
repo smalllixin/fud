@@ -60,18 +60,22 @@ static LMFilterPos LMFilterPosSticker = 160;
     [_camera startCameraCapture];
 
 #ifdef USE_GPUIMAGE
-    LMRenderEngine *renderEngine = [LMRenderEngine engineForTextureWithGLContext:[GPUImageContext sharedImageProcessingContext].context queue:[GPUImageContext sharedContextQueue]];
+    LMRenderEngineOption option;
+    option.faceless = NO;
+    option.orientation = _camera.outputOrientation;
+    LMRenderEngine *renderEngine = [LMRenderEngine engineForTextureWithGLContext:[GPUImageContext sharedImageProcessingContext].context queue:[GPUImageContext sharedContextQueue] option:option];
     _facekitOutput = [[GPUFacekitOutput alloc] initWithRenderEngine:renderEngine];
     _gpuImageView = [[GPUImageView alloc] initWithFrame:self.view.bounds];
     _gpuImageView.fillMode = kGPUImageFillModeStretch;
     [_facekitOutput addTarget:_gpuImageView];
     [self.view addSubview:_gpuImageView];
     
-    _facekitOutput.horizontallyMirrorFrontFacingCamera = YES;
-    _facekitOutput.outputImageOrientation = UIInterfaceOrientationPortrait;
 #else
     _ctx = [[LMGLContext alloc] initWithShareGroup:nil];
-    LMRenderEngine *renderEngine = [LMRenderEngine engineForTextureWithGLContext:_ctx.c queue:_ctx.contextQueue faceless:NO portraitOutput:YES];
+    LMRenderEngineOption option;
+    option.faceless = NO;
+    option.orientation = _camera.outputOrientation;
+    LMRenderEngine *renderEngine = [LMRenderEngine engineForTextureWithGLContext:_ctx.c queue:_ctx.contextQueue option:option];
     _previewView = [[LMGLPreviewView alloc] initWithFrame:self.view.bounds andContext:_ctx];
     [self.view addSubview:_previewView];
     _previewView.renderEngine = renderEngine;

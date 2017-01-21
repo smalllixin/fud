@@ -305,7 +305,7 @@ const Vertex Rotate_90_Flip_Vertices[] = {
     
     //calculate modelview
     glm::mat4 m;
-    if (!_renderEngine.portraitOutput) {
+    if (_renderEngine.inputOrientation != AVCaptureVideoOrientationPortrait) {
         m = glm::rotate(m, glm::pi<float>()/2, glm::vec3(0.0f, 0.0f, -1.0f));
         //then flip
         m = glm::scale(m, glm::vec3(1, -1, 1));

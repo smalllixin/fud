@@ -161,4 +161,6 @@ extern NSString *const kVideoChatTalkingKey;
 
 - (void)setFrameRate:(int32_t)frameRate;
 
+- (AVCaptureVideoOrientation)outputOrientation;
+
 @end

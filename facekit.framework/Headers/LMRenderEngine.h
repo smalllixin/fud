@@ -14,16 +14,18 @@
 
 typedef int LMFilterPos;
 
+typedef struct LMRenderEngineOption {
+    BOOL faceless;
+    AVCaptureVideoOrientation orientation;
+} LMRenderEngineOption;
+
 @interface LMRenderEngine : NSObject
 
 @property (nonatomic, assign) BOOL useExternalFaceDetect;
-@property (nonatomic, assign, readonly) BOOL portraitOutput;
+@property (nonatomic, assign, readonly) AVCaptureVideoOrientation inputOrientation;
 
 + (LMRenderEngine*)engineForTextureWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue;
-+ (LMRenderEngine*)engineForTextureWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue faceless:(BOOL)faceless;
-+ (LMRenderEngine*)engineForFacelessWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue;
-#pragma mark - Unstable ctor
-+ (LMRenderEngine*)engineForTextureWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue faceless:(BOOL)faceless portraitOutput:(BOOL)portraitOutput;
++ (LMRenderEngine*)engineForTextureWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue option:(LMRenderEngineOption)option;
 
 
 #pragma mark - Input processors

@@ -47,9 +47,7 @@ NSString *const kVideoChatTalkingKey = @"VideoChatTalking";
         _captureSession = [AVCaptureSession new];
         [self initCaptureIOput:_captureSession pixelFormatType:pixelFormatType];
         [self setCamerSessionPreset:preset];
-        if (cameraPosition == AVCaptureDevicePositionBack) {
-            [self updateCameraOrientation];
-        }
+        [self updateCameraOrientation];
     }
     return self;
 }
@@ -359,7 +357,9 @@ NSString *const kVideoChatTalkingKey = @"VideoChatTalking";
         [self addInputCameraSettingsTask:^(AVCaptureDevice *inputCamera) {
             [inputCamera setAutomaticallyAdjustsVideoHDREnabled:!enable];
             if (enable) {
-                [inputCamera setVideoHDREnabled:YES];
+                if (inputCamera.activeFormat.isVideoHDRSupported) {
+                    [inputCamera setVideoHDREnabled:YES];
+                }
             }
         }];
     }
@@ -543,6 +543,18 @@ NSString *const kVideoChatTalkingKey = @"VideoChatTalking";
 
 - (void)updateCameraOrientation
 {
+#define USE_PORTRAIT_OUTPUT 1
+#ifdef USE_PORTRAIT_OUTPUT
+    AVCaptureConnection *videoConnection = [_videoOutput connectionWithMediaType:AVMediaTypeVideo];
+    if (self.cameraPosition == AVCaptureDevicePositionBack) {
+        [videoConnection setVideoMirrored:NO];
+        [videoConnection setVideoOrientation:AVCaptureVideoOrientationPortrait];
+    }
+    else {
+        [videoConnection setVideoMirrored:YES];
+        [videoConnection setVideoOrientation:AVCaptureVideoOrientationPortrait];
+    }
+#else
     AVCaptureConnection *videoConnection = [_videoOutput connectionWithMediaType:AVMediaTypeVideo];
     if (self.cameraPosition == AVCaptureDevicePositionBack) {
         [videoConnection setVideoMirrored:YES];
@@ -552,6 +564,12 @@ NSString *const kVideoChatTalkingKey = @"VideoChatTalking";
         [videoConnection setVideoMirrored:NO];
         [videoConnection setVideoOrientation:AVCaptureVideoOrientationLandscapeLeft];
     }
+#endif
+}
+
+- (AVCaptureVideoOrientation)outputOrientation {
+    AVCaptureConnection *videoConnection = [_videoOutput connectionWithMediaType:AVMediaTypeVideo];
+    return videoConnection.videoOrientation;
 }
 
 #pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
