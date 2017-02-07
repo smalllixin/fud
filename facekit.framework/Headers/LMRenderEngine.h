@@ -27,6 +27,9 @@ typedef struct LMRenderEngineOption {
 + (LMRenderEngine*)engineForTextureWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue;
 + (LMRenderEngine*)engineForTextureWithGLContext:(EAGLContext*)context queue:(dispatch_queue_t)queue option:(LMRenderEngineOption)option;
 
+#pragma mark - Validation
+- (double)expiredTime; //unix timestamp
+- (BOOL)isAuthorized;
 
 #pragma mark - Input processors
 // All of process are syncrhonise method

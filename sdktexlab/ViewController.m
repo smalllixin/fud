@@ -104,6 +104,9 @@ static LMFilterPos LMFilterPosSticker = 160;
     _resBundle = resBundle;
 
     _renderEngine = renderEngine;
+    if (![renderEngine isAuthorized]) {
+        NSLog(@"sdk 验证失败");
+    }
     [self setupButtons];
     [self setupUI];
     [self setupAudioPlayer];
