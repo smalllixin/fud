@@ -70,7 +70,11 @@
         glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
         
         GLuint tex;
-        [_renderEngine processTexture:_videoTexture size:CGSizeMake(width,height) outputTexture:&tex];
+        CVPixelBufferRef outputPixelbuffer = NULL;
+        [_renderEngine processTexture:_videoTexture size:CGSizeMake(width,height) outputTexture:&tex outputPixelBuffer:&outputPixelbuffer];
+        if (outputPixelbuffer && self.processPixelbuffer) {
+            self.processPixelbuffer(outputPixelbuffer);
+        }
         
         CGSize size = CGSizeMake(width,height);
         if (outputFramebuffer && CGSizeEqualToSize(size, outputFramebuffer.size)) {

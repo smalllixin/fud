@@ -70,6 +70,24 @@ static LMFilterPos LMFilterPosSticker = 160;
     [_facekitOutput addTarget:_gpuImageView];
     [self.view addSubview:_gpuImageView];
     
+    ////得到pixelbuffer方法一
+    [_facekitOutput setProcessPixelbuffer:^(CVPixelBufferRef pixelBuffer) {
+        CVPixelBufferLockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
+        CVPixelBufferUnlockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
+    }];
+    
+    ////得到pixelbuffer方法二
+    _passthroughFilter = [[GPUImageFilter alloc] init];
+    [_facekitOutput addTarget:_passthroughFilter];
+    //可以通过下面的方式禁止_passthroughFilter渲染，等需要的时候再设置_facekitOutput.targetToIgnoreForUpdates = nil
+//    _facekitOutput.targetToIgnoreForUpdates = _passthroughFilter;
+    [_passthroughFilter setFrameProcessingCompletionBlock:^(GPUImageOutput *output, CMTime time) {
+        CVPixelBufferRef pixelBuffer = output.framebufferForOutput.pixelBuffer;
+        CVPixelBufferLockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
+        //在这里处理推流
+        CVPixelBufferUnlockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
+    }];
+    
 #else
     _ctx = [[LMGLContext alloc] initWithShareGroup:nil];
     LMRenderEngineOption option;

@@ -13,4 +13,6 @@
 
 - (id)initWithRenderEngine:(LMRenderEngine*)renderEngine;
 - (void)processSampleBuffer:(CMSampleBufferRef)sampleBuffer;
+
+@property (nonatomic, strong) void (^processPixelbuffer)(CVPixelBufferRef pixelbuffer);
 @end
