@@ -1,0 +1,7 @@
+{
+    "urlpre": "http://stickers.faceu.mobi/@/beaufilter/assets/",
+    "res": [
+        "origin_0721.png"
+    ],
+    "empty": "0"
+}

@@ -1,0 +1,11 @@
+﻿{
+    "urlpre": "http://stickers.faceu.mobi/@/beaufilter/assets/",
+    "res": [
+        "brannan_pr.png",
+        "brannan_bl.png",
+        "brannan_co.png",
+        "brannan_lu.png",
+        "brannan_sc.png"
+    ],
+    "empty": "0"
+}

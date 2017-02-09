@@ -1,0 +1,16 @@
+{
+  "resUrl" : [
+    "http:\/\/stickers.faceu.mobi\/@\/beaufilter\/assets\/nature_20170124_2.png"
+  ],
+  "glsl" : "glsl",
+  "position" : 2000,
+  "resources" : [
+    "nature_20170124_2.png"
+  ],
+  "translateVersion" : 1,
+  "empty" : "0",
+  "maxPersonCount" : 0,
+  "type" : "filter",
+  "name" : "NATURE",
+  "useFaceNumber" : 0
+}

@@ -1,0 +1,8 @@
+﻿{
+    "urlpre": "http://stickers.faceu.mobi/@/beaufilter/assets/",
+    "res": [
+        "walden_ma.png",
+        "vignette_ma.png"
+    ],
+    "empty": "0"
+}

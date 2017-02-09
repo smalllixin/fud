@@ -1,0 +1,6 @@
+{
+	"urlpre":"http://7xlvfj.com2.z0.glb.qiniucdn.com/@/beaufilter/assets/",
+    "res": [
+    ],
+	"empty":"0"
+}

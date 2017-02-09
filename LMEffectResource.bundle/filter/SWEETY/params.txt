@@ -1,0 +1,7 @@
+{
+  "urlpre": "http://stickers.faceu.mobi/@/beaufilter/assets/",
+  "res": [
+    "sweety_20170124.png"
+  ],
+  "empty": "0"
+}

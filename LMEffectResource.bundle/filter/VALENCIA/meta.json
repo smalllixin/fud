@@ -1,0 +1,18 @@
+{
+  "resUrl" : [
+    "http:\/\/stickers.faceu.mobi\/@\/beaufilter\/assets\/valencia_ma.png",
+    "http:\/\/stickers.faceu.mobi\/@\/beaufilter\/assets\/valencia_gr.png"
+  ],
+  "glsl" : "glsl",
+  "position" : 2000,
+  "resources" : [
+    "valencia_ma.png",
+    "valencia_gr.png"
+  ],
+  "translateVersion" : 1,
+  "empty" : "0",
+  "maxPersonCount" : 0,
+  "type" : "filter",
+  "name" : "VALENCIA",
+  "useFaceNumber" : 0
+}

@@ -1,0 +1,7 @@
+﻿{
+    "urlpre": "http://stickers.faceu.mobi/@/beaufilter/assets/",
+    "res": [
+        "inkwell_ma.png"
+    ],
+    "empty": "0"
+}

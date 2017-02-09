@@ -1,0 +1,24 @@
+{
+  "resUrl" : [
+    "http:\/\/stickers.faceu.mobi\/@\/beaufilter\/assets\/brannan_pr.png",
+    "http:\/\/stickers.faceu.mobi\/@\/beaufilter\/assets\/brannan_bl.png",
+    "http:\/\/stickers.faceu.mobi\/@\/beaufilter\/assets\/brannan_co.png",
+    "http:\/\/stickers.faceu.mobi\/@\/beaufilter\/assets\/brannan_lu.png",
+    "http:\/\/stickers.faceu.mobi\/@\/beaufilter\/assets\/brannan_sc.png"
+  ],
+  "glsl" : "glsl",
+  "position" : 2000,
+  "resources" : [
+    "brannan_pr.png",
+    "brannan_bl.png",
+    "brannan_co.png",
+    "brannan_lu.png",
+    "brannan_sc.png"
+  ],
+  "translateVersion" : 1,
+  "empty" : "0",
+  "maxPersonCount" : 0,
+  "type" : "filter",
+  "name" : "BRANNAN",
+  "useFaceNumber" : 0
+}

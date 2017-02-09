@@ -14,8 +14,8 @@
 #define USE_GPUIMAGE 1
 
 //
-static LMFilterPos LMFilterPosBeauty = 100;
-static LMFilterPos LMFilterPosFilter = 120;
+static LMFilterPos LMFilterPosBeauty = 1000;
+static LMFilterPos LMFilterPosFilter = 2000;
 static LMFilterPos LMFilterPosReshape = 140;
 static LMFilterPos LMFilterPosSticker = 160;
 
@@ -134,21 +134,8 @@ static LMFilterPos LMFilterPosSticker = 160;
     [self.camera enableContinuousAutoExposure];
     [self.camera enableContinuousAutoWhiteBalance];
     [self.camera setVideoHDREnable:YES];
-    //    [_renderEngine applyWithPath:[resBundle pathForResource:BeautySandbox(2) ofType:@""]];
-    //    [_renderEngine applyWithPath:[resBundle pathForResource:@"effect/maopa" ofType:@""]];
-    //    [_renderEngine applyWithPath:[resBundle pathForResource:@"effect/maoyao_mz" ofType:@""]];
-    //    [_renderEngine applyWithPath:[resBundle pathForResource:@"effect/shuijing_b" ofType:@""]];
-    //    [_renderEngine applyWithPath:[resBundle pathForResource:@"effect/animal_zhuzhu_b" ofType:@""]];
-    //    [_renderEngine applyWithPath:[resBundle pathForResource:@"effect/animal_mycat" ofType:@""]];
-    //    [_renderEngine applyWithPath:[resBundle pathForResource:@"effect/SikaDeer" ofType:@""]];
-    //    [_renderEngine applyBeautyLevelV2:kLMBeautyFilterLevel2];
-    //    [_renderEngine applyStickerWithName:@"effect/boomhair"];
-    //    [_renderEngine applyDayan];
-    
-    //    [_renderEngine applyStickerWithName:@"effect/indian"];
-    //    [_renderEngine applyStickerWithName:@"effect/cat_ear"];
-    //    [_renderEngine applyStickerWithName:@"effect/hiphop"];
-    //    [_renderEngine applyStickerWithName:@"effect/zhangcao"];
+    [_renderEngine applyWithPath:[_resBundle pathForResource:@"beauty/5" ofType:@""]];
+    [_renderEngine applyWithPath:[_resBundle pathForResource:@"filter/ORIGIN" ofType:@""]];
 }
 
 - (void)dealloc {
@@ -162,37 +149,50 @@ static LMFilterPos LMFilterPosSticker = 160;
 
 - (void)setupButtons {
     _sandbox = @[
-                 @{@"tag":@(100), @"name": @"beauty/beauty0", @"title": @"美颜1"},
-                 @{@"tag":@(101), @"name": @"beauty/beauty1", @"title": @"美颜2"},
-                 @{@"tag":@(102), @"name": @"beauty/beauty2", @"title": @"美颜3"},
-                 @{@"tag":@(103), @"name": @"beauty/beauty3", @"title": @"美颜4"},
-                 @{@"tag":@(104), @"name": @"beauty/beauty4", @"title": @"美颜5"},
-                 @{@"tag":@(200), @"name": @"beauty/new_beauty0", @"title": @"new美颜1"},
-                 @{@"tag":@(201), @"name": @"beauty/new_beauty1", @"title": @"new美颜2"},
-                 @{@"tag":@(202), @"name": @"beauty/new_beauty2", @"title": @"new美颜3"},
+                 @{@"tag":@(100), @"name": @"beauty/1", @"title": @"美颜1"},
+                 @{@"tag":@(101), @"name": @"beauty/2", @"title": @"美颜2"},
+                 @{@"tag":@(102), @"name": @"beauty/3", @"title": @"美颜3"},
+                 @{@"tag":@(103), @"name": @"beauty/4", @"title": @"美颜4"},
+                 @{@"tag":@(104), @"name": @"beauty/5", @"title": @"美颜5"},
                  
-                 @{@"tag":@(110), @"name": @"filter/filter0", @"title": @"滤镜1"},
-                 @{@"tag":@(111), @"name": @"filter/filter1", @"title": @"滤镜2"},
-                 @{@"tag":@(112), @"name": @"filter/filter2", @"title": @"滤镜3"},
-                 @{@"tag":@(113), @"name": @"filter/filter3", @"title": @"滤镜4"},
-                 @{@"tag":@(114), @"name": @"filter/filter4", @"title": @"滤镜5"},
+                 @{@"tag":@(110), @"name": @"filter/CLEAN", @"title": @"滤镜CLEAN"},
+                 @{@"tag":@(111), @"name": @"filter/ORIGIN", @"title": @"滤镜ORIGIN"},
+                 @{@"tag":@(112), @"name": @"filter/BRANNAN", @"title": @"滤镜BRANNAN"},
+                 @{@"tag":@(113), @"name": @"filter/CORAL", @"title": @"滤镜CORAL"},
+                 @{@"tag":@(114), @"name": @"filter/CRISP", @"title": @"滤镜CRIPS"},
+                 @{@"tag":@(115), @"name": @"filter/FRESH", @"title": @"滤镜FRESH"},
+                 @{@"tag":@(116), @"name": @"filter/GRASS", @"title": @"滤镜GRASS"},
+                 @{@"tag":@(117), @"name": @"filter/INKWELL", @"title": @"滤镜INKWELL"},
+                 @{@"tag":@(118), @"name": @"filter/LOLITA", @"title": @"滤镜LOLITA"},
+                 @{@"tag":@(119), @"name": @"filter/NATURE", @"title": @"滤镜NATURE"},
+                 @{@"tag":@(120), @"name": @"filter/PINK", @"title": @"滤镜PINK"},
+                 @{@"tag":@(121), @"name": @"filter/ROCOCO", @"title": @"滤镜ROCOCO"},
+                 @{@"tag":@(122), @"name": @"filter/ROSY", @"title": @"滤镜ROSY"},
+                 @{@"tag":@(123), @"name": @"filter/SUNSET", @"title": @"滤镜SUNSET"},
+                 @{@"tag":@(124), @"name": @"filter/SWEETY", @"title": @"滤镜SWEETY"},
+                 @{@"tag":@(125), @"name": @"filter/URBAN", @"title": @"滤镜URBAN"},
+                 @{@"tag":@(126), @"name": @"filter/VALENCIA", @"title": @"滤镜VALENCIA"},
+                 @{@"tag":@(127), @"name": @"filter/VINTAGE", @"title": @"滤镜VINTAGE"},
+                 @{@"tag":@(128), @"name": @"filter/VIVID", @"title": @"滤镜VIVID"},
+                 @{@"tag":@(129), @"name": @"filter/WALDEN", @"title": @"滤镜WALDEN"},
+                 @{@"tag":@(130), @"name": @"filter/BEACH", @"title": @"滤镜BEACH"},
                  
                  @{@"tag":@(150), @"name": @"surgery/bigeyes", @"title": @"大眼"},
                  @{@"tag":@(151), @"name": @"surgery/bigeyesAndSlimface", @"title": @"大颜瘦脸"},
                  @{@"tag":@(152), @"name": @"surgery/lovely", @"title": @"Cute脸"},
                  @{@"tag":@(153), @"name": @"surgery/snakeface", @"title": @"蛇脸"},
                  
-                 @{@"tag":@(1), @"name": @"effect/cat_ear", @"title": @"猫耳"},
-                 @{@"tag":@(2), @"name": @"effect/hiphop", @"title": @"嘻哈"},
-                 @{@"tag":@(3), @"name": @"effect/zhangcao", @"title": @"长草"},
-                 @{@"tag":@(4), @"name": @"effect/rifeng_b", @"title": @"扇子"},
-                 @{@"tag":@(5), @"name": @"effect/SikaDeer", @"title": @"鹿"},
-                 @{@"tag":@(6), @"name": @"effect/j3_gaibang", @"title": @"丐帮"},
-                 @{@"tag":@(8), @"name": @"effect/maopa", @"title": @"猫趴"},
-                 @{@"tag":@(9), @"name": @"effect/maoyao_mz", @"title": @"猫妖"},
-                 @{@"tag":@(10), @"name": @"effect/moshou", @"title": @"魔兽"},
-                 @{@"tag":@(11), @"name": @"effect/animal_zhuzhu_b", @"title": @"猪猪"},
-                 @{@"tag":@(12), @"name": @"effect/animal_mycat", @"title": @"手猫"},
+//                 @{@"tag":@(1), @"name": @"effect/cat_ear", @"title": @"猫耳"},
+//                 @{@"tag":@(2), @"name": @"effect/hiphop", @"title": @"嘻哈"},
+//                 @{@"tag":@(3), @"name": @"effect/zhangcao", @"title": @"长草"},
+//                 @{@"tag":@(4), @"name": @"effect/rifeng_b", @"title": @"扇子"},
+//                 @{@"tag":@(5), @"name": @"effect/SikaDeer", @"title": @"鹿"},
+//                 @{@"tag":@(6), @"name": @"effect/j3_gaibang", @"title": @"丐帮"},
+//                 @{@"tag":@(8), @"name": @"effect/maopa", @"title": @"猫趴"},
+//                 @{@"tag":@(9), @"name": @"effect/maoyao_mz", @"title": @"猫妖"},
+//                 @{@"tag":@(10), @"name": @"effect/moshou", @"title": @"魔兽"},
+//                 @{@"tag":@(11), @"name": @"effect/animal_zhuzhu_b", @"title": @"猪猪"},
+//                 @{@"tag":@(12), @"name": @"effect/animal_mycat", @"title": @"手猫"},
                  ];
     _containerView = [[UIView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:_containerView];
@@ -221,8 +221,8 @@ static LMFilterPos LMFilterPosSticker = 160;
         }
     }
     
-    y = yStartPos;
-    x += width + 1;
+//    y = yStartPos;
+//    x += width + 1;
     
     NSArray *closeBtns = @[
                            @{@"tag":@(LMFilterPosBeauty), @"title": @"关闭美颜" },
@@ -248,13 +248,27 @@ static LMFilterPos LMFilterPosSticker = 160;
     
     UIButton *cameraRotateButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [_containerView addSubview:cameraRotateButton];
-    [cameraRotateButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [cameraRotateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [cameraRotateButton setTitle:@"切换摄像头" forState:UIControlStateNormal];
     [cameraRotateButton addTarget:self action:@selector(rotateCamera) forControlEvents:UIControlEventTouchUpInside];
     [cameraRotateButton sizeToFit];
     cameraRotateButton.frame = CGRectMake(self.view.frame.size.width - cameraRotateButton.frame.size.width,
                                           self.view.frame.size.height - cameraRotateButton.frame.size.height,
                                           cameraRotateButton.frame.size.width, cameraRotateButton.frame.size.height);
+    
+    UIButton *hideHUDButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_containerView addSubview:hideHUDButton];
+    [hideHUDButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [hideHUDButton setTitle:@"隐藏标签" forState:UIControlStateNormal];
+    [hideHUDButton addTarget:self action:@selector(hideHUD) forControlEvents:UIControlEventTouchUpInside];
+    [hideHUDButton sizeToFit];
+    hideHUDButton.frame = CGRectMake(self.view.frame.size.width - cameraRotateButton.frame.size.width - hideHUDButton.frame.size.width - 30,
+                                          self.view.frame.size.height - hideHUDButton.frame.size.height,
+                                          hideHUDButton.frame.size.width, hideHUDButton.frame.size.height);
+}
+
+- (void)hideHUD {
+    _containerView.hidden = YES;
 }
 
 - (void)onPressed:(UIButton*)btn {

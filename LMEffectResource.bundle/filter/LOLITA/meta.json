@@ -1,0 +1,16 @@
+{
+  "resUrl" : [
+    "http:\/\/stickers.faceu.mobi\/@\/beaufilter\/assets\/lolita_0922.png"
+  ],
+  "glsl" : "glsl",
+  "position" : 2000,
+  "resources" : [
+    "lolita_0922.png"
+  ],
+  "translateVersion" : 1,
+  "empty" : "0",
+  "maxPersonCount" : 0,
+  "type" : "filter",
+  "name" : "LOLITA",
+  "useFaceNumber" : 0
+}

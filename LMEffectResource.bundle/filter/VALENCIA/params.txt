@@ -1,0 +1,8 @@
+{
+    "urlpre": "http://stickers.faceu.mobi/@/beaufilter/assets/",
+    "res": [
+        "valencia_ma.png",
+        "valencia_gr.png"
+    ],
+    "empty": "0"
+}

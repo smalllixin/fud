@@ -1,0 +1,18 @@
+{
+  "resUrl" : [
+    "http:\/\/stickers.faceu.mobi\/@\/beaufilter\/assets\/walden_ma.png",
+    "http:\/\/stickers.faceu.mobi\/@\/beaufilter\/assets\/vignette_ma.png"
+  ],
+  "glsl" : "glsl",
+  "position" : 2000,
+  "resources" : [
+    "walden_ma.png",
+    "vignette_ma.png"
+  ],
+  "translateVersion" : 1,
+  "empty" : "0",
+  "maxPersonCount" : 0,
+  "type" : "filter",
+  "name" : "WALDEN",
+  "useFaceNumber" : 0
+}

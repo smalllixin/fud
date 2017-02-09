@@ -1,0 +1,13 @@
+{
+  "translateVersion" : 1,
+  "glsl" : "glsl",
+  "position" : 1000,
+  "resources" : [
+
+  ],
+  "empty" : "0",
+  "maxPersonCount" : 0,
+  "type" : "beauty",
+  "name" : "20003_7",
+  "useFaceNumber" : 0
+}

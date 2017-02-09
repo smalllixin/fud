@@ -1,0 +1,7 @@
+{
+    "urlpre": "http://stickers.faceu.mobi/@/beaufilter/assets/",
+    "res": [
+        "beach_0701.png"
+    ],
+    "empty": "0"
+}

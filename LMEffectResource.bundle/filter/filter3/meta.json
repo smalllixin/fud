@@ -1,8 +1,0 @@
-{
-	"name"		: 	"filter3",
-    "type"		: 	"filter",
-    "glsl" 		: 	"glsl",
-    "position"  :   120,
-	"resources" : 	["pict0.png", "pict1.png", "pict2.png", "pict3.png", "pict4.png"],
-	"version" 	: 	1
-}
